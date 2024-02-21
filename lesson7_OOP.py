@@ -32,7 +32,7 @@ class Student1(object):
 
 student1 = Student1('simba','male')
 
-print(dir(student1))
+
 
 
 class Animal(object):
@@ -46,3 +46,35 @@ class Dog(Animal):
 
 dog = Dog()
 dog.run()
+
+
+def set_age(self,age):
+    self.age = age
+from types import MethodType
+s = Student('simba',90)
+s.age = 18
+print(s.age)
+s.set_age =MethodType(set_age,s)
+s.set_age(20)
+print(s.age)
+
+class Screen(object):
+    @property
+    def width(self):
+        return self.__width
+    
+    @width.setter
+    def width(self,value):
+        self.__width = value
+
+    @property
+    def height(self):
+        self.__height    
+
+    @height.setter
+    def height(self,value):
+        self.__height = value
+
+    @property
+    def resolution(self):
+        return self.__width * self.__height
